@@ -11,9 +11,9 @@ class ProcessSponsorshipEditJob < ApplicationJob
       hook_name: :feed,
     )
 
-    GenerateSponsorsYamlFileJob.perform_now(@conference)
+    # GenerateSponsorsYamlFileJob.perform_now(@conference)
 
-    EnsureSponsorshipTitoDiscountCodeJob.perform_now(@sponsorship, 'attendee')
-    EnsureSponsorshipTitoDiscountCodeJob.perform_now(@sponsorship, 'booth_staff')
+    # EnsureSponsorshipTitoDiscountCodeJob.perform_now(@sponsorship, 'attendee')
+    # EnsureSponsorshipTitoDiscountCodeJob.perform_now(@sponsorship, 'booth_staff')
   end
 end
