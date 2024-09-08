@@ -27,7 +27,7 @@ RUN bundle install --path /gems --jobs 100 --deployment --without development:te
 FROM public.ecr.aws/sorah/ruby:3.2
 
 RUN apt-get update \
-    && apt-get install -y libpq5 \
+    && apt-get install -y libjemalloc2 libpq5 \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
