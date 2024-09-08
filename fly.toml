@@ -1,0 +1,51 @@
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+
+app = 'sponsor-app'
+primary_region = 'nrt'
+console_command = '/rails/bin/rails console'
+
+[build]
+  dockerfile = "Dockerfile"
+
+[deploy]
+  release_command = 'bundle exec rails db:migrate'
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+
+[[vm]]
+  memory = '512mb'
+  cpu_kind = 'shared'
+  cpus = 1
+
+[experimental]
+  cmd = ["bundle", "exec", "puma", "-b", "tcp://0.0.0.0", "-p", "3000", "-w", "0", "-t", "4:4"]
+
+[env]
+  AWS_REGION = "ap-northeast-1"
+  DATABASE_URL = "postgres://sponsor_app@trk12-shared.flycast:5432"
+  DEFAULT_EMAIL_ADDRESS = "no-reply@tokyorubykaigi12.org"
+  DEFAULT_EMAIL_HOST = "tokyorubykaigi12.org"
+  DEFAULT_URL_HOST = "sponsorships.tokyorubykaigi12.org"
+  ENABLE_SHORYUKEN = "0"
+  GITHUB_APP_ID = "990067"
+  GITHUB_CLIENT_ID = "Iv23liCJtVnA9gLDRmaL"
+  GITHUB_REPO = "tokyorubykaigi12/auth"
+  MAILGUN_SMTP_LOGIN = "postmaster@tokyorubykaigi12.org"
+  MAILGUN_SMTP_PORT = "587"
+  MAILGUN_SMTP_SERVER = "smtp.mailgun.org"
+  ORG_NAME = "Tokyo RubyKaigi 12 Team"
+  RAILS_ENV = "production"
+  RAILS_SERVE_STATIC_FILES = "1"
+  S3_FILES_BUCKET = "tokyorubykaigi12"
+  S3_FILES_PREFIX = "sponsor-app-production/"
+  S3_FILES_REGION = "ap-northeast-1"
+  S3_FILES_ROLE = "arn:aws:iam::985623304185:role/Trk12SponsorAppProduction"
+
+  # LD_PRELOAD = "/usr/lib/x86_64-linux-gnu/libjemalloc.so.2"
+  # MALLOC_CONF = "dirty_decay_ms:0,muzzy_decay_ms:0,narenas:2,background_thread:true,thp:never"
