@@ -28,6 +28,7 @@ console_command = '/rails/bin/rails console'
 
 [env]
   AWS_REGION = "ap-northeast-1"
+  AWS_ROLE_ARN = "arn:aws:iam::529088264854:role/Trk12SponsorAppProduction"
   DATABASE_URL = "postgres://sponsor_app@trk12-shared.flycast:5432"
   DEFAULT_EMAIL_ADDRESS = "no-reply@tokyorubykaigi12.org"
   DEFAULT_EMAIL_HOST = "tokyorubykaigi12.org"
@@ -44,7 +45,7 @@ console_command = '/rails/bin/rails console'
   ORG_NAME = "Tokyo RubyKaigi 12 Team"
   RAILS_ENV = "production"
   RAILS_SERVE_STATIC_FILES = "1"
-  S3_FILES_BUCKET = "tokyorubykaigi12"
-  S3_FILES_PREFIX = "sponsor-app-production/"
+  S3_FILES_BUCKET = "trk12-sponsor-app"
+  S3_FILES_PREFIX = "production/"
   S3_FILES_REGION = "ap-northeast-1"
-  S3_FILES_ROLE = "arn:aws:iam::985623304185:role/Trk12SponsorAppProduction"
+  S3_FILES_ROLE = "arn:aws:iam::529088264854:role/Trk12SponsorAppImageUploader"
