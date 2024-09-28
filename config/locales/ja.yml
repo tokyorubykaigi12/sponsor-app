@@ -3,9 +3,9 @@ ja:
   activerecord:
     attributes:
       sponsorship:
-        name: '会社名/組織名 (英語)'
+        name: '会社名/組織名'
         url: 'URL'
-        profile: '紹介文 (英語)'
+        profile: '紹介文'
         booth_requested: 'ブース出展'
         number_of_additional_attendees: '追加Attendeeチケット枚数'
         policy_agreement: 'ポリシーへ同意する'
@@ -45,7 +45,7 @@ ja:
             booth_requested:
               not_eligible: "は選択されたスポンサープランでは対象外です"
             profile:
-              too_long: "が長過ぎます。選択されたプランでは英文 %{maximum} ワード程度が上限となっています。"
+              too_long: "が長過ぎます。選択されたプランでは%{maximum}文字が上限となっています。"
 
   helpers:
     label:
@@ -121,9 +121,9 @@ ja:
           one: 'ブース出展可能'
           other: 'ブース出展可能'
         words_limit:
-          zero: '英文 0 word'
-          one: '英文 1 word'
-          other: '英文およそ %{count} words'
+          zero: '0文字'
+          one: '1文字'
+          other: '%{count}文字'
         auto_acceptance: '選択されているプラン %{plan} では申し込み後即座に申し込みが確定となります。'
         not_auto_acceptance: '選択されているプラン %{plan} ではスポンサー申込について後日確定となります。申し込み後のアナウンスをお待ちください。'
       plan_sold_out: '受付終了'
