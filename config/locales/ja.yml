@@ -45,7 +45,7 @@ ja:
             booth_requested:
               not_eligible: "は選択されたスポンサープランでは対象外です"
             profile:
-              too_long: "が長過ぎます。選択されたプランでは英文 %{maximum} ワード程度が上限となっています。"
+              too_long: "が長過ぎます。選択されたプランでは%{maximum}文字が上限となっています。"
 
   helpers:
     label:
@@ -121,9 +121,9 @@ ja:
           one: 'ブース出展可能'
           other: 'ブース出展可能'
         words_limit:
-          zero: '英文 0 word'
-          one: '英文 1 word'
-          other: '英文およそ %{count} words'
+          zero: '0文字'
+          one: '1文字'
+          other: '%{count}文字'
         auto_acceptance: '選択されているプラン %{plan} では申し込み後即座に申し込みが確定となります。'
         not_auto_acceptance: '選択されているプラン %{plan} ではスポンサー申込について後日確定となります。申し込み後のアナウンスをお待ちください。'
       plan_sold_out: '受付終了'
@@ -132,7 +132,7 @@ ja:
       booth_uneligible_plan_selected: '選択されたプランではブース出展はできません (%{plans} プランのみが対象となります)'
       information: 'サイト掲載情報'
       information_help: |
-        ウェブサイトや会場に掲載するためのスポンサーの情報をご提供ください。紹介文は、Ruby 400文字、Gold 200文字、Silver 100文字以内です。
+        ウェブサイトや会場に掲載するためのスポンサーの情報をご提供ください。
       logo: 'ロゴ'
       download_logo: '(以前にアップロードしたファイルをダウンロードする)'
       logo_help: |
