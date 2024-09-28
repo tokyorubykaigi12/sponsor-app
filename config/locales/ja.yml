@@ -3,9 +3,9 @@ ja:
   activerecord:
     attributes:
       sponsorship:
-        name: '会社名/組織名 (英語)'
+        name: '会社名/組織名'
         url: 'URL'
-        profile: '紹介文 (英語)'
+        profile: '紹介文'
         booth_requested: 'ブース出展'
         number_of_additional_attendees: '追加Attendeeチケット枚数'
         policy_agreement: 'ポリシーへ同意する'
@@ -132,7 +132,7 @@ ja:
       booth_uneligible_plan_selected: '選択されたプランではブース出展はできません (%{plans} プランのみが対象となります)'
       information: 'サイト掲載情報'
       information_help: |
-        ウェブサイトや会場に掲載するためのスポンサーの情報をご提供ください。
+        ウェブサイトや会場に掲載するためのスポンサーの情報をご提供ください。紹介文は、Ruby 400文字、Gold 200文字、Silver 100文字以内です。
       logo: 'ロゴ'
       download_logo: '(以前にアップロードしたファイルをダウンロードする)'
       logo_help: |
