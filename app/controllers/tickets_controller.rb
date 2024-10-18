@@ -64,6 +64,7 @@ class TicketsController < ApplicationController
 
   private def set_locale
     session[:hl] = :ja
+    I18n.locale = session[:hl]
   end
 
   private def ticket_params

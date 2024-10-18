@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
 
   def set_locale
     session[:hl] = :ja
+    I18n.locale = session[:hl]
   end
 
   helper_method def current_staff
