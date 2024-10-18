@@ -5,19 +5,7 @@ class ApplicationController < ActionController::Base
   private
 
   def set_locale
-    case
-    when params[:hl] 
-      if I18n.available_locales.include?(params[:hl].to_sym)
-        session[:hl] = params[:hl].to_sym
-      else
-        session.delete(:hl)
-      end
-    when !session[:hl] && request.headers['HTTP_CLOUDFRONT_VIEWER_COUNTRY']&.downcase == 'jp'
-      session[:hl] = :ja
-    end
-    if session[:hl]
-      I18n.locale = session[:hl]
-    end
+    session[:hl] = :ja
   end
 
   helper_method def current_staff

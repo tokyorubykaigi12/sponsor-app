@@ -63,17 +63,7 @@ class TicketsController < ApplicationController
   end
 
   private def set_locale
-    if params[:hl] 
-      if I18n.available_locales.include?(params[:hl].to_sym)
-        session[:hl] = params[:hl].to_sym
-      else
-        session.delete(:hl)
-      end
-    end
-
-    if session[:hl]
-      I18n.locale = session[:hl]
-    end
+    session[:hl] = :ja
   end
 
   private def ticket_params
