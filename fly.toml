@@ -2,7 +2,7 @@
 
 app = 'sponsor-app'
 primary_region = 'nrt'
-console_command = '/rails/bin/rails console'
+console_command = 'bundle exec rails console'
 
 [build]
   dockerfile = "Dockerfile"
