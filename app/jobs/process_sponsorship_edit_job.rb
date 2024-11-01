@@ -13,7 +13,7 @@ class ProcessSponsorshipEditJob < ApplicationJob
 
     # GenerateSponsorsYamlFileJob.perform_now(@conference)
 
-    # EnsureSponsorshipTitoDiscountCodeJob.perform_now(@sponsorship, 'attendee')
+    EnsureSponsorshipTitoDiscountCodeJob.perform_now(@sponsorship, 'attendee')
     # EnsureSponsorshipTitoDiscountCodeJob.perform_now(@sponsorship, 'booth_staff')
   end
 end
